@@ -45,7 +45,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-screen w-screen  bg-gray-100  z-[1] flex justify-center items-start  md:items-center overflow-scroll">
+    <div className="h-screen w-screen  bg-gray-100  z-[1] flex flex-col justify-center items-start  md:items-center overflow-scroll">
       <div className=" w-fit h-fit grid grid-cols-1  md:grid-cols-3 gap-1 ">
         {cards.map((card, index) => (
           <Card
@@ -59,6 +59,13 @@ export default function Home() {
           />
         ))}
       </div>
+      <a
+        className="text-blue-600  text-lg font-bold  md:text-2xl  md:font-extrabold cursor-pointer mt-4"
+        href="https://github.com/kumarajay0412/UI-Components/tree/main/FlipMirrorCard"
+        target="_blank"
+      >
+        Source Code{" "}
+      </a>
     </div>
   );
 }
