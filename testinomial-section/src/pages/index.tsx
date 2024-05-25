@@ -87,6 +87,45 @@ const ReviewCard = ({
   );
 };
 
+const ReviewCardSkew = ({
+  img,
+  name,
+  body,
+  star,
+}: {
+  img: string;
+  name: string;
+  body: string;
+  star: number;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative h-fit skew-y-[-10deg]  w-fit cursor-pointer overflow-hidden rounded-xl border p-4 flex flex-col justify-between",
+        "border-gray-550 bg-gray-200 hover:-translate-y-1 hover:translate-x-1 hover:scale-[1.025] hover:shadow-xl transition-all"
+      )}
+    >
+      <blockquote className="mt-2 text-sm text-black/80 ">“{body}”</blockquote>
+      <div className="flex flex-col gap-2  pt-2">
+        <div className="flex flex-row items-center gap-2">
+          <img
+            className="rounded-full"
+            width="32"
+            height="32"
+            alt=""
+            src={img}
+          />
+          <div className="flex flex-col">
+            <figcaption className="text-sm font-medium text-black">
+              {name}
+            </figcaption>
+          </div>
+        </div>
+      </div>
+    </figure>
+  );
+};
+
 const MarqueeDemoVertical = () => {
   return (
     <div className="relative flex h-[800px] w-fit   flex-row items-center justify-center overflow-hidden rounded-lg border bg-background sm:px-20 md:shadow-xl">
@@ -135,14 +174,71 @@ const MarqueeDemoHorizontal = () => {
   );
 };
 
+const MarqueeSingleLineHorizontal = () => {
+  return (
+    <div className="relative flex w-[1000px]    flex-col items-center justify-center overflow-hidden rounded-lg border bg-background sm:px-20 md:shadow-xl">
+      <Marquee className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCard key={review.name} {...review} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-[20%] bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-[20%] bg-gradient-to-l from-white dark:from-background"></div>
+    </div>
+  );
+};
+
+const MarqueeSingleLineVerticalSkew = () => {
+  return (
+    <div className="relative flex h-[700px] w-[800px]   flex-row items-center justify-center overflow-hidden rounded-lg border ">
+      <Marquee vertical skew className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCardSkew key={review.name} {...review} />
+        ))}
+      </Marquee>
+      <Marquee vertical skew className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCardSkew key={review.name} {...review} />
+        ))}
+      </Marquee>
+      <Marquee vertical skew className="[--duration:20s]">
+        {firstRow.map((review) => (
+          <ReviewCardSkew key={review.name} {...review} />
+        ))}
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-[20%] bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-[20%] bg-gradient-to-l from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[20%] bg-gradient-to-b from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-white dark:from-background"></div>
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center bg-white">
+      <div className="h-screen w-screen flex flex-col items-center justify-center bg-white m-[100px]">
+        <div className=" text-xl py-[50px]">
+          Infinite horizontal single scroll
+        </div>
+
+        <MarqueeSingleLineHorizontal />
+      </div>
+
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-white">
+        <div className=" text-xl py-[50px]">Infinite vertical scroll</div>
+
         <MarqueeDemoVertical />
       </div>
+
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-white">
+        <div className=" text-xl py-[50px]">Infinite horizontal scroll</div>
         <MarqueeDemoHorizontal />
+      </div>
+
+      <div className="h-screen w-screen flex flex-col items-center justify-center  m-[100px]">
+        <div className=" text-xl py-[50px]">Skewed Infinite Scroll</div>
+        <MarqueeSingleLineVerticalSkew />
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ const config: Config = {
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
-        "marquee-vertical-skew": "marquee-vertical-skew 20s linear infinite",
       },
       keyframes: {
         marquee: {
@@ -22,16 +21,6 @@ const config: Config = {
         "marquee-vertical": {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
-        },
-        "marquee-vertical-skew": {
-          "0%": {
-            transform:
-              "rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)",
-          },
-          "100%": {
-            transform:
-              "rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)",
-          },
         },
       },
     },

@@ -7,6 +7,7 @@ interface MarqueeProps {
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
+  skew?: boolean;
   [key: string]: any;
 }
 
@@ -17,6 +18,7 @@ export default function Marquee({
   children,
   vertical = false,
   repeat = 5,
+  skew = false,
   ...props
 }: MarqueeProps) {
   const marqueeClass = cn(
@@ -24,6 +26,7 @@ export default function Marquee({
     {
       "flex-row": !vertical,
       "flex-col": vertical,
+      "skew-x-[30deg]": skew,
     },
     className
   );
