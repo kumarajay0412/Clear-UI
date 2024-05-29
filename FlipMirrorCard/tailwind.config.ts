@@ -16,7 +16,7 @@ const config: Config = {
       },
       animation: {
         flip: "flip 1.5s cubic-bezier(0.6, 0, 0.8, 1)",
-        shine: "shine 1s 0.5s linear",
+        mirror: "mirror 1s 0.5s linear",
       },
       keyframes: {
         flip: {
@@ -41,7 +41,7 @@ const config: Config = {
             "box-shadow": "6rem 6rem 0.5rem rgba(100, 116, 139, 0.2)",
           },
         },
-        shine: {
+        mirror: {
           "0%": {
             top: "-100%",
           },

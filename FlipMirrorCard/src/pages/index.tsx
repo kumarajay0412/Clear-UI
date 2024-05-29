@@ -7,10 +7,10 @@ export default function Home() {
 
   const cards = [
     {
-      title: "Amazon Web Services",
+      title: "Amazon ",
       founded: "1994",
       about:
-        "Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud computing platforms to individuals, companies, and governments, on a metered pay-as-you-go basis. The company offers a broad range of cloud computing services, including compute, storage, database, and application services. It also provides managed services for developers and system integrators.",
+        "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is one of the Big Five companies in the U.S. information technology industry, along with Google, Apple, Microsoft, and Facebook.",
     },
     {
       title: "Google",

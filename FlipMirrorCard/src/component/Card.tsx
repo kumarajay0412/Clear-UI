@@ -76,11 +76,11 @@ const Card: React.FC<CardProps> = ({
         } relative cursor-pointer rounded-lg text-center transition-all`}
         style={{ transformStyle: "preserve-3d" }}
       >
-        <div className="p-4 rounded-xl cursor-pointe  bg-[#F8F7F4] absolute w-full h-full backface-hidden flex items-center justify-center shadow-xl">
+        <div className="p-4 rounded-xl cursor-pointe  border-gray-550 bg-gray-200 border-[2px] absolute w-full h-full backface-hidden flex items-center justify-center shadow-xl">
           <h4 className="text-balance">{title}</h4>
         </div>
         <div
-          className="p-4 rounded-xl cursor-pointe  bg-[#F8F7F4] absolute w-full h-full backface-hidden flex flex-col items-center justify-center overflow-hidden gap-2 shadow-xl"
+          className="p-4 rounded-xl cursor-pointe  border-gray-550 bg-gray-200 border-[2px] absolute w-full h-full backface-hidden flex flex-col items-center justify-center overflow-hidden gap-2 shadow-xl"
           style={{
             transform: "rotateY(180deg)",
           }}
@@ -92,7 +92,7 @@ const Card: React.FC<CardProps> = ({
           <p className="text-[12px] text-slate-500 text-center">{about}</p>
 
           {flipped && (
-            <div className="absolute w-24 h-[600px] bg-white rotate-45	 top-[300%] animate-shine " />
+            <div className="absolute w-24 h-[600px] bg-white rotate-45	 top-[300%] animate-mirror " />
           )}
         </div>
       </div>
