@@ -8,6 +8,9 @@
 2. Infinite card scroll section &#x20;
 
 #### Below is demo of some of the components  [Demo Link](https://infinite-scroll-card-six.vercel.app/)
-##### ![Screen Recording 2024-05-25 at 5 31 54 PM](https://github.com/kumarajay0412/Clear-UI/assets/66991625/5e8f24f1-4487-4617-9239-144e65f38385)
-##### ![Screen Recording 2024-05-25 at 5 31 30 PM](https://github.com/kumarajay0412/Clear-UI/assets/66991625/5c434a0a-a397-4942-b451-b8525f1fe824)
+##### ![Screen Recording 2024-06-02 at 2 59 51 AM (2)](https://github.com/kumarajay0412/Clear-UI/assets/66991625/4bfa0308-594f-45c0-a728-18dae6ae163f)
+##### ![Screen Recording 2024-06-02 at 2 59 51 AM (2)](https://github.com/kumarajay0412/Clear-UI/assets/66991625/d502a5eb-8eed-42f8-b7b8-31f1444b46cd)
+
+
+
 
