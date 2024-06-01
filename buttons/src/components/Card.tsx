@@ -1,29 +1,33 @@
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface MarqueeProps {
+  className?: string;
   reverse?: boolean;
   pauseOnHover?: boolean;
   children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
   skew?: boolean;
+  [key: string]: any;
 }
 
 export default function Marquee({
+  className,
   reverse = false,
   pauseOnHover = false,
   children,
   vertical = false,
   repeat = 5,
   skew = false,
+  ...props
 }: MarqueeProps) {
-  const marqueeClass = `group flex    p-2 gap-4  ${
+  const marqueeClass = `group flex overflow-hidden p-2 ${
     vertical ? "flex-col" : "flex-row"
-  } ${skew ? "skew-x-[30deg]" : ""} `;
-  const itemClass = `flex gap-4  ${vertical ? "flex-col" : "flex-row"} ${
-    reverse ? "reverse" : ""
-  }`;
+  } ${skew ? "skew-x-[30deg]" : ""} ${className}`;
+  const itemClass = `flex shrink-0 justify-around ${
+    vertical ? "flex-col" : "flex-row"
+  } ${reverse ? "reverse" : ""}`;
 
   const animationControls = useAnimation();
 
@@ -41,8 +45,8 @@ export default function Marquee({
 
   const marqueeVariants = {
     animate: {
-      x: vertical ? 0 : reverse ? ["-100%", "0%"] : ["0%", "-100%"],
-      y: vertical ? (reverse ? ["-100%", "0%"] : ["0%", "-100%"]) : 0,
+      x: vertical ? 0 : ["0%", "-100%"],
+      y: vertical ? ["0%", "-100%"] : 0,
       transition: {
         x: { duration: 20, repeat: Infinity, ease: "linear" },
         y: { duration: 20, repeat: Infinity, ease: "linear" },
@@ -52,10 +56,11 @@ export default function Marquee({
 
   useEffect(() => {
     animationControls.start("animate");
-  }, [animationControls, reverse]);
+  }, [animationControls]);
 
   return (
     <div
+      {...props}
       className={marqueeClass}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
