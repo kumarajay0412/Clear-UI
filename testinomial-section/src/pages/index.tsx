@@ -216,7 +216,7 @@ const MarqueeSingleLineVerticalSkew = () => {
 
 export default function Home() {
   return (
-    <div className="flex flex-col   items-center justify-center bg-white text-black">
+    <div className="flex flex-col overflow-hidden   items-center justify-center bg-white text-black">
       <div className="h-screen w-fit flex flex-col items-center justify-center bg-white ">
         <div className=" text-xl py-[50px]">
           Infinite horizontal single scroll
