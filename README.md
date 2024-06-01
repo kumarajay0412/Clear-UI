@@ -9,7 +9,7 @@
 
 #### Below is demo of some of the components  [Demo Link](https://infinite-scroll-card-six.vercel.app/)
 ##### ![Screen Recording 2024-06-02 at 2 59 51 AM (2)](https://github.com/kumarajay0412/Clear-UI/assets/66991625/4bfa0308-594f-45c0-a728-18dae6ae163f)
-##### ![Screen Recording 2024-06-02 at 2 59 51 AM (2)](https://github.com/kumarajay0412/Clear-UI/assets/66991625/d502a5eb-8eed-42f8-b7b8-31f1444b46cd)
+##### ![Screen Recording 2024-06-02 at 3 00 35 AM (2)](https://github.com/kumarajay0412/Clear-UI/assets/66991625/f0a6bd5d-b3b8-4281-ad7a-ffd1590b69d9)
 
 
 
